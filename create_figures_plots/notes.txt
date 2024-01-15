@@ -1,0 +1,63 @@
+minimum_depth,
+minimum_depth_alternate,
+reference_length,
+twist_control,
+ident_sample,
+control_by_caller,
+working_vcf_rows,
+expected_snp,
+expected_snp_chr,
+expected_snp_len,
+observed_snp,
+observed_snp_chr,
+observed_snp_len,
+negation_snp,
+negation_snp_chr,
+negation_snp_len,
+corrected_snp,
+corrected_snp_chr,
+corrected_snp_len,
+other_control_snp,
+other_control_snp_chr,
+other_control_snp_len,
+true_positive_snp,
+true_positive_snp_chr,
+true_positive_snp_len,
+false_positive_snp,
+false_positive_snp_chr,
+false_positive_snp_len,
+false_negative_snp,
+false_negative_snp_chr,
+false_negative_snp_len,
+corrected_ref_len,
+human_cts,
+blind_minimum_depth,
+blind_median_depth,
+blind_mean_depth,
+blind_max_depth,
+aware_minimum_depth,
+aware_median_depth,
+aware_mean_depth,
+aware_max_depth,
+sort_mean,
+metadata_synthetic,
+tp_mean,
+tp_median,
+tp_sd,
+tp_summary,
+fp_mean,
+fp_median,
+fp_sd,
+fp_summary
+
+
+
+      print(paste(twist_control, control_variant_text_label[[twist_control]], ident_sample, control_by_caller, paste("Rows:", working_vcf_rows),  sep = " : "))
+      print(metadata_by_sample %>% filter(Identifier == ident_sample))
+      
+      print(paste(human_cts, blind_minimum_depth, blind_median_depth, blind_mean_depth, blind_max_depth, aware_minimum_depth, aware_median_depth, aware_mean_depth, aware_max_depth, sort_mean,  sep = " : "))
+      
+      print(paste("expected_snp_len", expected_snp_len, "observed_snp_len", observed_snp_len,  "negation_snp_len",  negation_snp_len, "corrected_snp_len", corrected_snp_len, "other_control_snp_len", other_control_snp_len, "true_positive_snp_len", true_positive_snp_len, "false_positive_snp_len", false_positive_snp_len, "false_negative_snp_len", false_negative_snp_len, sep = " : "))
+    print(metadata_synthetic)
+    print(minimum_depth)
+    print(minimum_depth_alternate)
